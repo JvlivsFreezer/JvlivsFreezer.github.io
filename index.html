@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhinav Yadav — Computer and Communication Engineering student at MIT Manipal.">
+  <title>Abhinav Yadav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home">Abhinav Yadav</a>
+
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Computer &amp; Communication Engineering · MIT Manipal</p>
+        <h1>Hi, I'm Abhinav.</h1>
+        <p class="intro">
+          I’m a third-year CCE student interested in backend development, systems,
+          networking, and building things that work beyond a demo.
+        </p>
+
+        <div class="hero-links">
+          <a class="button primary" href="#projects">See my work</a>
+          <a class="button" href="mailto:abhinav2.mitmpl2024@learner.manipal.edu">Email me</a>
+        </div>
+
+        <div class="quick-links">
+          <a href="https://www.linkedin.com/in/abhinav-yadav-51ab9831b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/JvlivsFreezer" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:abhinav2.mitmpl2024@learner.manipal.edu">abhinav2.mitmpl2024@learner.manipal.edu ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-wrap">
+          <img src="assets/profile.jpg" alt="Abhinav Yadav"
+               onerror="this.style.display='none'; document.querySelector('.photo-placeholder').style.display='grid';">
+          <div class="photo-placeholder">AY</div>
+        </div>
+        <p class="photo-note">MIT Manipal · CCE</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>About</h2>
+      </div>
+
+      <div class="two-column">
+        <p>
+          I’m currently pursuing a B.Tech in Computer and Communication Engineering
+          at Manipal Institute of Technology. I enjoy understanding how software
+          works underneath the interface — data structures, databases, networks,
+          and backend systems.
+        </p>
+        <p>
+          I’ve worked on network traffic classification during my Samsung R&amp;D
+          internship and built projects ranging from a Redis-compatible key-value
+          store to a doctor appointment platform.
+        </p>
+      </div>
+
+      <div class="small-facts">
+        <div><span>CGPA</span><strong>7.61 / 10</strong></div>
+        <div><span>LOCATION</span><strong>Manipal, Karnataka</strong></div>
+        <div><span>DEGREE</span><strong>B.Tech · CCE</strong></div>
+      </div>
+    </section>
+
+    <section id="education" class="section compact-section">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>Education</h2>
+      </div>
+
+      <div class="education-row">
+        <div>
+          <h3>Manipal Institute of Technology</h3>
+          <p>Bachelor of Technology, Computer and Communication Engineering</p>
+          <p class="muted">Relevant coursework: Data Structures &amp; Algorithms, Computer Networks, Operating Systems, OOP, DBMS</p>
+        </div>
+        <div class="date">Aug 2024 — May 2028</div>
+      </div>
+
+      <div class="school-row">
+        <span>Hiralal Public School · Class XII · 2024</span>
+        <strong>91%</strong>
+      </div>
+      <div class="school-row">
+        <span>DAV Public School · Class X · 2022</span>
+        <strong>98%</strong>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-heading">
+        <span>03</span>
+        <h2>Experience</h2>
+      </div>
+
+      <article class="experience">
+        <div class="experience-top">
+          <div>
+            <h3>Samsung R&amp;D Institute Bangalore</h3>
+            <p>Project Intern — Prism Worklet: Adaptive Live Traffic Classification</p>
+          </div>
+          <span class="date">Sep 2025 — Feb 2026</span>
+        </div>
+
+        <ul>
+          <li>Configured an Arch Linux system as a network observation point using IP forwarding and iptables to route traffic through a device-under-test.</li>
+          <li>Developed Python tooling to capture and analyze live network traffic using packet sizes, inter-arrival times, protocol information, and TCP flags.</li>
+          <li>Implemented an in-memory feature extraction pipeline to prepare network flows for real-time traffic classification.</li>
+          <li>Evaluated classification performance and optimized the feature extraction pipeline for low-latency inference.</li>
+        </ul>
+
+        <div class="tags">
+          <span>Python</span><span>Linux</span><span>Wireshark</span><span>iptables</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <span>04</span>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects">
+
+        <article class="project">
+          <div class="project-number">01</div>
+          <div>
+            <h3>Redis Clone</h3>
+            <p class="stack">Python · TCP Sockets · RESP Protocol</p>
+            <p>
+              A Redis-compatible in-memory key-value store using raw TCP sockets,
+              with concurrent clients, a custom hash table, LRU eviction and TTL expiry.
+            </p>
+            <ul>
+              <li>Separate chaining for O(1) GET / SET / DEL.</li>
+              <li>LRU using a doubly linked list and hashmap.</li>
+              <li>Background reaper thread for TTL / expiry.</li>
+              <li>Web dashboard for live store statistics.</li>
+            </ul>
+            <a href="https://github.com/JvlivsFreezer" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02</div>
+          <div>
+            <h3>Caffeine Tracker</h3>
+            <p class="stack">JavaScript · HTML · CSS · Supabase</p>
+            <p>
+              A responsive web app for logging daily caffeine intake and viewing
+              historical consumption trends.
+            </p>
+            <ul>
+              <li>Supabase authentication.</li>
+              <li>PostgreSQL-backed persistent storage.</li>
+              <li>CRUD operations for intake records.</li>
+              <li>Interactive consumption history.</li>
+            </ul>
+            <a href="https://github.com/JvlivsFreezer" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">03</div>
+          <div>
+            <h3>DOQTO</h3>
+            <p class="stack">Node.js · Express · MongoDB · Redis · React</p>
+            <p>
+              A multi-role doctor appointment booking platform for patients,
+              doctors, and administrators.
+            </p>
+            <ul>
+              <li>JWT authentication and role-based access control.</li>
+              <li>Redis caching to reduce database reads.</li>
+              <li>Atomic appointment-slot reservations.</li>
+              <li>Designed to prevent concurrent booking conflicts.</li>
+            </ul>
+            <a href="https://github.com/JvlivsFreezer" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <span>05</span>
+        <h2>Skills</h2>
+      </div>
+
+      <div class="skills">
+        <div><span>Languages</span><p>Java · Python · JavaScript · C</p></div>
+        <div><span>Frontend</span><p>HTML · CSS · JavaScript · Chart.js</p></div>
+        <div><span>Backend</span><p>FastAPI · REST APIs</p></div>
+        <div><span>Databases</span><p>SQL · PostgreSQL</p></div>
+        <div><span>Developer Tools</span><p>Git · VS Code · Wireshark</p></div>
+        <div><span>Networking</span><p>Linux Networking · Packet Capture · Traffic Analysis</p></div>
+        <div><span>Protocols</span><p>TCP/IP · HTTP · DNS</p></div>
+        <div><span>Core</span><p>DSA · OS · Computer Networks · DBMS · OOP</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">06 — Contact</p>
+      <h2>Want to talk?</h2>
+      <p>If you have an interesting project, internship opportunity, or just want to connect, feel free to reach out.</p>
+
+      <div class="contact-list">
+        <a href="mailto:abhinav2.mitmpl2024@learner.manipal.edu">
+          <span>Email</span>
+          abhinav2.mitmpl2024@learner.manipal.edu ↗
+        </a>
+        <a href="https://www.linkedin.com/in/abhinav-yadav-51ab9831b/" target="_blank" rel="noopener">
+          <span>LinkedIn</span>
+          linkedin.com/in/abhinav-yadav-51ab9831b ↗
+        </a>
+        <a href="https://github.com/JvlivsFreezer" target="_blank" rel="noopener">
+          <span>GitHub</span>
+          github.com/JvlivsFreezer ↗
+        </a>
+        <a href="tel:+918826989611">
+          <span>Phone</span>
+          +91 8826989611 ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Abhinav Yadav</span>
+    <span>MIT Manipal · CCE</span>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.menu-button');
+    const nav = document.querySelector('.main-nav');
+
+    button.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      button.setAttribute('aria-expanded', open);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const revealItems = document.querySelectorAll('.section, .contact');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealItems.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
